@@ -1,0 +1,5 @@
+
+{
+  "main": "src/index.ts",
+  "name":"Notes-Api"
+}
