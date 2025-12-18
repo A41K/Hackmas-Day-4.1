@@ -32,7 +32,6 @@ app.delete("/api/notes/:id", (c) => {
   return c.json({ message: "Note deleted" });
 });
 
-// ----------- THIS IS WHAT BUN NEEDS -----------
 export default {
   port: Number(process.env.PORT) || 3000,
   fetch: app.fetch,

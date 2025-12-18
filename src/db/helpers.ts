@@ -1,4 +1,3 @@
-// src/db/helpers.ts
 import { db } from "./index";
 import { notes } from "./schema";
 import { eq } from "drizzle-orm";
