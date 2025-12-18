@@ -1,4 +1,9 @@
-import "dotenv/config"
-import { drizzle } from "drizzle-orm/bun-sqlite"
+import "dotenv/config";
+import { drizzle } from "drizzle-orm/bun-sqlite";
+import { Database } from "bun:sqlite";
 
-export const db = drizzle(process.env.DB_FILE_NAME!)
+// Log which database is being used (for debugging)
+console.log("Using database file:", process.env.DB_FILE_NAME);
+
+const sqlite = new Database(process.env.DB_FILE_NAME!);
+export const db = drizzle(sqlite);
